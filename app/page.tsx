@@ -1,7 +1,11 @@
 import { title } from "@/components/primitives";
 import { Cards } from "@/components/cards";
+import Mentor, { users } from "@/components/mentors";
 
 export default function Home() {
+  const moretti = users.find((user) => user.id === 1);
+  const goyeneche = users.find((user) => user.id === 2);
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center w-5/6 ">
@@ -18,6 +22,17 @@ export default function Home() {
 
       <div className="mt-8 w-4/6 lg:w-3/6">
         <Cards />
+      </div>
+
+      <h1 className={title({ color: "violet", class: "mt-8 text-center" })}>
+        Maestros Colaboradores
+      </h1>
+
+      <div className="mt-8 w-4/6 lg:w-3/6">
+        <Mentor user={moretti} />
+      </div>
+      <div className="mt-8 w-4/6 lg:w-3/6">
+        <Mentor user={goyeneche} />
       </div>
     </section>
   );
