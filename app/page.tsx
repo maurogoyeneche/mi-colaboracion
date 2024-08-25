@@ -1,4 +1,4 @@
-import { title, subtitle } from "@/components/primitives";
+import { title } from "@/components/primitives";
 import { Cards } from "@/components/cards";
 
 export default function Home() {
@@ -9,10 +9,10 @@ export default function Home() {
         <h1 className={title({ color: "violet" })}>Colaborar&nbsp;</h1>
         <br />
         <h1 className={title({ size: "sm" })}>
-          a la vez que aprendes trucos de peluquería. para mejorar día a dia.
+          a la vez que aprendes trucos de peluquería y ser mejorar día a dia.
         </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Especializate, ayudando a otros!
+        <h2 className="mt-8 text-xl">
+          Aprende y Crece, Mientras Ayudas a Otros.
         </h2>
       </div>
 

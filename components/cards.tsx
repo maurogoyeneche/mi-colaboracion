@@ -11,7 +11,7 @@ import { DonationL1Icon } from "./icons";
 export const Cards = () => {
   const list = [
     {
-      title: "Donación Nivel 1",
+      title: "Nivel 1",
       url: "https://mpago.la/2DEkFwk",
       price: "$370",
       icon: (
@@ -19,14 +19,14 @@ export const Cards = () => {
       ),
     },
     {
-      title: "Donación Nivel 2",
+      title: "Nivel 2",
       url: "https://mpago.la/2Pd3PvM",
       price: "$570",
 
       icon: <DonationL1Icon color="#AA0000" height={60} width={60} />,
     },
     {
-      title: "Donación Nivel 3",
+      title: "Nivel 3",
       url: "https://mpago.la/2JfhYF8",
       price: "$970",
       icon: <DonationL1Icon color="#E60000" height={70} width={70} />,
@@ -34,7 +34,7 @@ export const Cards = () => {
   ];
 
   return (
-    <div className="gap-4 grid grid-cols-1 sm:grid-cols-3 w-full">
+    <div className="gap-6 grid grid-cols-1 sm:grid-cols-3 w-full">
       {list.map((item, index) => (
         <Card
           key={(item.title, index)}
@@ -45,7 +45,7 @@ export const Cards = () => {
           shadow-lg hover:shadow-xl dark:shadow-zinc-800"
           shadow="md"
         >
-          <CardHeader className="flex text-xl justify-center lg:text-medium font-semibold">
+          <CardHeader className="flex text-2xl justify-center lg:text-2xl font-semibold">
             {item.title}
           </CardHeader>
 
