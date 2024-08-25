@@ -52,7 +52,7 @@ export const Cards = () => {
           <CardBody className="overflow-visible p-0">
             <span className="mx-auto my-auto">{item.icon}</span>
           </CardBody>
-          <CardFooter className="text-lg justify-around lg:justify-between lg:text-sm">
+          <CardFooter className="text-lg justify-around lg:justify-between lg:text-sm px-0 lg:px-5">
             <b>Valor: </b>
             <p className="text-default-500">{item.price}</p>
           </CardFooter>
