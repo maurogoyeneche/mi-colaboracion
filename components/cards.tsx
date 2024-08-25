@@ -6,8 +6,6 @@ import { Button } from "@nextui-org/button";
 
 import { DonationL1Icon } from "./icons";
 
-// import { buttonStyles } from "@/styles/button";
-
 export const Cards = () => {
   const list = [
     {
@@ -22,6 +20,7 @@ export const Cards = () => {
       title: "Nivel 2",
       url: "https://mpago.la/2Pd3PvM",
       price: "$570",
+      recommended: true,
 
       icon: <DonationL1Icon color="#AA0000" height={60} width={60} />,
     },
@@ -36,35 +35,43 @@ export const Cards = () => {
   return (
     <div className="gap-6 grid grid-cols-1 sm:grid-cols-3 w-full">
       {list.map((item, index) => (
-        <Card
-          key={(item.title, index)}
-          className="cursor-pointer p-2 text-center 
-          dark:bg-black
-          hover:scale-105 transform transition-all duration-100
-          border border-zinc-300 dark:border-gray-500 rounded-lg 
-          shadow-lg hover:shadow-xl dark:shadow-zinc-800"
-          shadow="md"
-        >
-          <CardHeader className="flex text-2xl justify-center lg:text-2xl font-semibold">
-            {item.title}
-          </CardHeader>
-
-          <CardBody className="overflow-visible p-0">
-            <span className="mx-auto my-auto">{item.icon}</span>
-          </CardBody>
-          <CardFooter className="text-lg justify-around lg:justify-between lg:text-sm px-0 lg:px-5">
-            <b>Valor: </b>
-            <p className="text-default-500">
-              {item.price} <span className="text-xs">UYU</span>
-            </p>
-          </CardFooter>
-          <Button
-            className="w-5/6 mx-auto mb-1 bg-blue-600 text-white mt-2"
-            onClick={() => (window.location.href = item.url)}
+        <>
+          <Card
+            key={(item.title, index)}
+            className={`over cursor-pointer py-6 px-2 text-center 
+            dark:bg-black
+            hover:scale-105 transform transition-all duration-100
+            border border-zinc-300 dark:border-gray-500 rounded-lg 
+            shadow-lg hover:shadow-xl dark:shadow-zinc-800
+            ${item.recommended && "border-4 border-blue-400 dark:border-blue-600"}`}
+            shadow="md"
           >
-            Donar
-          </Button>
-        </Card>
+            {item.recommended && (
+              <span className=" text-xs text-center font-semibold transform scale-75 rounded-md bg-green-700 text-white w-[130px] px-4 py-1 mx-auto -my-2">
+                RECOMENDADO
+              </span>
+            )}
+            <CardHeader className="flex text-2xl justify-center lg:text-2xl font-semibold my-2">
+              {item.title}
+            </CardHeader>
+
+            <CardBody className="overflow-visible p-0">
+              <span className="mx-auto my-auto">{item.icon}</span>
+            </CardBody>
+            <CardFooter className="text-lg justify-around lg:justify-between lg:text-sm px-0 lg:px-5 pb-2 mt-4 lg:mt-2">
+              <b>Valor: </b>
+              <p className="text-default-500">
+                {item.price} <span className="text-xs">UYU</span>
+              </p>
+            </CardFooter>
+            <Button
+              className="w-5/6 mx-auto mb-1 bg-blue-600 text-white mt-0"
+              onClick={() => (window.location.href = item.url)}
+            >
+              Donar
+            </Button>
+          </Card>
+        </>
       ))}
     </div>
   );

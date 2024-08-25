@@ -18,20 +18,28 @@ export default function Home() {
         <h2 className="mt-8 text-xl">
           Aprende y Crece, Mientras Ayudas a Otros.
         </h2>
+        <h3 className="mt-8 text-l text-gray-700 dark:text-gray-400 ">
+          Elegí tu nivel de colaboracion
+        </h3>
       </div>
 
-      <div className="mt-8 w-4/6 lg:w-3/6">
+      <div className="mt-2 w-4/6 lg:w-3/6">
         <Cards />
       </div>
 
-      <h1 className={title({ color: "violet", class: "mt-8 text-center" })}>
+      <h1
+        className={title({
+          color: "violet",
+          class: "mt-10 text-center lg:text-md",
+        })}
+      >
         Maestros Colaboradores
       </h1>
 
-      <div className="mt-8 w-4/6 lg:w-3/6">
+      <div className="mt-8 w-4/6 lg:w-3/6 text-center">
         <Mentor user={moretti} />
       </div>
-      <div className="mt-8 w-4/6 lg:w-3/6">
+      <div className="mt-8 w-4/6 lg:w-3/6 text-center">
         <Mentor user={goyeneche} />
       </div>
     </section>
