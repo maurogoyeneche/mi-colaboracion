@@ -38,7 +38,7 @@ export const Cards = () => {
         <>
           <Card
             key={(item.title, index)}
-            className={`over cursor-pointer py-6 px-2 text-center 
+            className={`over cursor-pointer py-5 px-2 text-center 
             dark:bg-black
             hover:scale-105 transform transition-all duration-100
             border border-zinc-300 dark:border-gray-500 rounded-lg 
@@ -46,12 +46,13 @@ export const Cards = () => {
             ${item.recommended && "border-4 border-blue-400 dark:border-blue-600"}`}
             shadow="md"
           >
-            {item.recommended && (
-              <span className=" text-xs text-center font-semibold transform scale-75 rounded-md bg-green-700 text-white w-[130px] px-4 py-1 mx-auto -my-2">
-                RECOMENDADO
-              </span>
-            )}
-            <CardHeader className="flex text-2xl justify-center lg:text-2xl font-semibold my-2">
+            <span
+              className={`${item.recommended ? "visible" : "hidden"} text-sm lg:text-xs text-center font-semibold transform scale-75 rounded-md bg-green-700 text-white w-[140px] px-4 py-1 mx-auto -mt-4 `}
+            >
+              RECOMENDADO
+            </span>
+
+            <CardHeader className="flex text-2xl justify-center lg:text-2xl font-semibold mb-4 -mt-2">
               {item.title}
             </CardHeader>
 

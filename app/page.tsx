@@ -23,7 +23,7 @@ export default function Home() {
         </h3>
       </div>
 
-      <div className="mt-2 w-4/6 lg:w-3/6">
+      <div className="mt-2 w-5/6 lg:w-3/6">
         <Cards />
       </div>
 
@@ -36,10 +36,9 @@ export default function Home() {
         Maestros Colaboradores
       </h1>
 
-      <div className="mt-8 w-4/6 lg:w-3/6 text-center">
+      <div className="flex flex-col align-middle gap-8 mt-8  items-baseline mx-10 lg:mx-auto">
         <Mentor user={moretti} />
-      </div>
-      <div className="mt-8 w-4/6 lg:w-3/6 text-center">
+
         <Mentor user={goyeneche} />
       </div>
     </section>
