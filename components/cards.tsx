@@ -54,7 +54,9 @@ export const Cards = () => {
           </CardBody>
           <CardFooter className="text-lg justify-around lg:justify-between lg:text-sm px-0 lg:px-5">
             <b>Valor: </b>
-            <p className="text-default-500">{item.price}</p>
+            <p className="text-default-500">
+              {item.price} <span className="text-xs">UYU</span>
+            </p>
           </CardFooter>
           <Button
             className="w-5/6 mx-auto mb-1 bg-blue-600 text-white mt-2"
