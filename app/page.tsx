@@ -16,8 +16,10 @@ export default function Home() {
         <h1 className={title({ size: "sm" })}>
           aprendiendo trucos de peluquería para mejorar día a dia.
         </h1>
-        <h2 className="mt-8 text-xl">
-          Aprende y Crece, Mientras Ayudas a Otros.
+        <h2 className="mt-8 text-lg text-zinc-300 italic">
+          Aprendamos... Seamos{" "}
+          <span className="text-white font-semibold">1%</span> mejor que ayer,
+          ayudando a otros.
         </h2>
         <h3 className="mt-8 text-l text-gray-700 dark:text-gray-400 ">
           Elegí tu nivel de colaboracion
