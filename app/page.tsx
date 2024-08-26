@@ -14,10 +14,10 @@ export default function Home() {
         <h1 className={title({ color: "violet" })}>Colaborar</h1>
         <br />
         <h1 className={title({ size: "sm" })}>
-          aprendiendo trucos de peluquería para mejorar día a dia.
+          aprendiendo trucos de peluquería para mejorar en día a día.
         </h1>
         <h2 className="mt-8 text-lg text-zinc-300 italic">
-          Aprendamos... Seamos{" "}
+          Aprendamos... Seamos
           <span className="text-white font-semibold">1%</span> mejor que ayer,
           ayudando a otros.
         </h2>
