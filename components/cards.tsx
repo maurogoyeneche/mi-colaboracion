@@ -13,7 +13,12 @@ export const Cards = () => {
       url: "https://mpago.la/2DEkFwk",
       price: "$370",
       icon: (
-        <DonationL1Icon color="#990000" height={50} stroke="#FFF" width={50} />
+        <DonationL1Icon
+          color="#990000"
+          height={50}
+          stroke="#FF3333"
+          width={50}
+        />
       ),
     },
     {
@@ -33,7 +38,7 @@ export const Cards = () => {
   ];
 
   return (
-    <div className="gap-6 lg:gap-8 grid grid-cols-1 sm:grid-cols-3 w-full">
+    <div className="gap-6 lg:gap-7 grid grid-cols-1 sm:grid-cols-3 w-full">
       {list.map((item, index) => (
         <>
           <Card

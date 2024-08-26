@@ -230,7 +230,7 @@ export const DonationL1Icon: React.FC<IconSvgProps> = (props) => {
         // stroke={stroke}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth="1"
       />
       <path
         d="M12 13L11 12L13 9.99996L10 7.49996L12.77 4.57996"
