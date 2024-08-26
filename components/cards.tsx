@@ -44,9 +44,8 @@ export const Cards = () => {
           <Card
             key={(item.title, index)}
             className={`over cursor-pointer py-5 px-2 text-center 
-            dark:bg-black
             hover:scale-105 transform transition-all duration-100
-            border border-zinc-300 dark:border-gray-500 rounded-lg 
+            border border-zinc-300 dark:border-gray-600 rounded-lg 
             shadow-lg hover:shadow-xl dark:shadow-zinc-800
             ${item.recommended && "border-1 border-blue-300 dark:border-blue-600 transform lg:scale-110 lg:hover:scale-125"}`}
           >
@@ -56,7 +55,7 @@ export const Cards = () => {
               RECOMENDADO
             </span>
 
-            <CardHeader className="flex text-2xl justify-center lg:text-2xl font-semibold mb-4 -mt-2">
+            <CardHeader className="flex text-4xl justify-center lg:text-2xl font-semibold mb-4 -mt-2">
               {item.title}
             </CardHeader>
 
