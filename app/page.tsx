@@ -36,7 +36,7 @@ export default function Home() {
           class: "mt-20 text-center lg:text-md",
         })}
       >
-        Maestros Colaboradores
+        Expositores
       </h1>
 
       <div className="flex flex-col align-middle gap-8 mt-8  items-baseline mx-10 lg:mx-auto">
