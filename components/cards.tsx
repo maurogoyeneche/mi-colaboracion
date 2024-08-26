@@ -33,7 +33,7 @@ export const Cards = () => {
   ];
 
   return (
-    <div className="gap-6 grid grid-cols-1 sm:grid-cols-3 w-full">
+    <div className="gap-6 lg:gap-8 grid grid-cols-1 sm:grid-cols-3 w-full">
       {list.map((item, index) => (
         <>
           <Card
@@ -43,7 +43,7 @@ export const Cards = () => {
             hover:scale-105 transform transition-all duration-100
             border border-zinc-300 dark:border-gray-500 rounded-lg 
             shadow-lg hover:shadow-xl dark:shadow-zinc-800
-            ${item.recommended && "border-4 border-blue-400 dark:border-blue-600"}`}
+            ${item.recommended && "border-1 border-blue-300 dark:border-blue-600 transform lg:scale-110 lg:hover:scale-125"}`}
             shadow="md"
           >
             <span
