@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className={title({ color: "violet" })}>Colaborar</h1>
         <br />
         <h1 className={title({ size: "sm" })}>
-          aprendiendo trucos de peluquería para mejorar en día a día.
+          aprendiendo trucos de peluquería para mejorar tu día a día.
         </h1>
         <h2 className="mt-8 text-lg text-zinc-900 dark:text-zinc-300 italic">
           Aprendamos... Seamos
