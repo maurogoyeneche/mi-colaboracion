@@ -1,6 +1,7 @@
 import { title } from "@/components/primitives";
 import { Cards } from "@/components/cards";
 import Mentor, { users } from "@/components/mentors";
+import Disclaimer from "@/components/disclaimer";
 
 export default function Home() {
   const moretti = users.find((user) => user.id === 1);
@@ -30,7 +31,7 @@ export default function Home() {
       <h1
         className={title({
           color: "violet",
-          class: "mt-10 text-center lg:text-md",
+          class: "mt-20 text-center lg:text-md",
         })}
       >
         Maestros Colaboradores
@@ -38,8 +39,10 @@ export default function Home() {
 
       <div className="flex flex-col align-middle gap-8 mt-8  items-baseline mx-10 lg:mx-auto">
         <Mentor user={moretti} />
-
         <Mentor user={goyeneche} />
+      </div>
+      <div className=" text-center mt-8 items-baseline mx-auto">
+        <Disclaimer />
       </div>
     </section>
   );

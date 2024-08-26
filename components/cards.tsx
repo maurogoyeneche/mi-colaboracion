@@ -44,7 +44,6 @@ export const Cards = () => {
             border border-zinc-300 dark:border-gray-500 rounded-lg 
             shadow-lg hover:shadow-xl dark:shadow-zinc-800
             ${item.recommended && "border-1 border-blue-300 dark:border-blue-600 transform lg:scale-110 lg:hover:scale-125"}`}
-            shadow="md"
           >
             <span
               className={`${item.recommended ? "visible" : "hidden"} text-sm lg:text-xs text-center font-semibold transform scale-75 rounded-md bg-green-700 text-white w-[140px] px-4 py-1 mx-auto -mt-4 `}
