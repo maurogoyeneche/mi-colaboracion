@@ -58,6 +58,7 @@ export default function RootLayout({
               >
                 <span className="text-default-600 mx-[1px]">Powered by</span>
                 <NextImage
+                  priority
                   alt="Mentor logo"
                   className="invert dark:invert-0"
                   height={30}
