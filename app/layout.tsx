@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
+import NextImage from "next/image";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
@@ -55,8 +56,14 @@ export default function RootLayout({
                 href="#"
                 title="magodev"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-slate-400 font-bold">MENTOR</p>
+                <span className="text-default-600 mx-[1px]">Powered by</span>
+                <NextImage
+                  alt="Mentor logo"
+                  className="invert dark:invert-0"
+                  height={30}
+                  src="https://pub-b213a1fb448445b2a1bd745a11fba172.r2.dev/logo_white.png"
+                  width={70}
+                />
               </Link>
             </footer>
           </div>
