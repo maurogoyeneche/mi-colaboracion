@@ -18,8 +18,8 @@ export default function Home() {
         </h1>
         <h2 className="mt-8 text-lg text-zinc-900 dark:text-zinc-300 italic">
           Aprendamos... Seamos
-          <span className="text-white font-semibold">1%</span> mejor que ayer,
-          ayudando a otros.
+          <span className="text-white font-extrabold mx-1">1%</span>mejor que
+          ayer, ayudando a otros.
         </h2>
         <h3 className="mt-8 text-l text-gray-700 dark:text-gray-400 ">
           Elegí tu nivel de colaboracion
