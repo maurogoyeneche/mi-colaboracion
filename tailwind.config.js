@@ -13,6 +13,10 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      backgroundImage: {
+        'recommended-gradient': 'linear-gradient(135deg, #2E0854, #4B0082, #8A2BE2, #9400D3, #9932CC)',
+        'default-gradient': 'linear-gradient(135deg, #18181B, #27272A, #3F3F46)',
+      },
     },
   },
   darkMode: "class",
