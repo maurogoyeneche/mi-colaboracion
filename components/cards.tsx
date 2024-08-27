@@ -38,42 +38,49 @@ export const Cards = () => {
   ];
 
   return (
-    <div className="gap-6 lg:gap-7 grid grid-cols-1 sm:grid-cols-3 w-full">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-8 ">
       {list.map((item, index) => (
         <>
           <Card
             key={(item.title, index)}
-            className={`over cursor-pointer py-5 px-2 text-center 
-            hover:scale-105 transform transition-all duration-100
-            border border-zinc-300 dark:border-gray-600 rounded-lg 
+            className={`flex flex-col justify-between cursor-pointer text-center box-border w-full lg:w-[218px] h-[280px] 
+            hover:scale-105 transform transition-all duration-100 px-2 pt-8 pb-4
+            border border-zinc-300 dark:border-gray-600  
             shadow-lg hover:shadow-xl dark:shadow-zinc-800
-            ${item.recommended && "border-1 border-blue-300 dark:border-blue-600 transform lg:scale-110 lg:hover:scale-125"}`}
+            ${item.recommended && "border-1 transform lg:scale-110 lg:hover:scale-125"}`}
+            style={{
+              background: item.recommended
+                ? "linear-gradient(135deg, #2E0854, #4B0082, #8A2BE2, #9400D3, #9932CC)"
+                : "linear-gradient(135deg, #18181B, #27272A, #3F3F46)",
+            }}
           >
             <span
-              className={`${item.recommended ? "visible" : "hidden"} text-sm lg:text-xs text-center font-semibold transform scale-75 rounded-md bg-green-700 text-white w-[140px] px-4 py-1 mx-auto -mt-4 `}
+              className={`${item.recommended ? "visible" : "hidden"} text-sm lg:text-xs text-center font-semibold transform scale-75 rounded-2xl border  text-white w-[140px] px-4 py-1 mx-auto -mt-4 `}
             >
               RECOMENDADO
             </span>
 
-            <CardHeader className="flex text-4xl justify-center lg:text-2xl font-semibold mb-4 -mt-2">
+            <CardHeader className="flex text-4xl justify-center lg:text-4xl font-semibold  ">
               {item.title}
             </CardHeader>
 
-            <CardBody className="overflow-visible p-0">
-              <span className="mx-auto my-auto">{item.icon}</span>
+            <CardBody>
+              <span className="mx-auto my-auto text-2xl p-0">
+                {item.price} <span className="text-xl">UYU</span>
+              </span>
             </CardBody>
-            <CardFooter className="text-lg justify-around lg:justify-between lg:text-sm px-0 lg:px-5 pb-2 mt-4 lg:mt-2">
-              <b>Valor: </b>
-              <p className="text-default-500">
-                {item.price} <span className="text-xs">UYU</span>
-              </p>
+            <CardFooter>
+              <Button
+                className={`w-full mx-auto text-white p-0 m-0 text-xl py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
+                  item.recommended
+                    ? "bg-gray-600 hover:bg-gray-700 focus:ring-gray-500 opacity-90"
+                    : "bg-purple-600 hover:bg-purple-700 focus:ring-purple-500"
+                }`}
+                onClick={() => (window.location.href = item.url)}
+              >
+                Donar
+              </Button>
             </CardFooter>
-            <Button
-              className="w-5/6 mx-auto mb-1 bg-blue-600 text-white mt-0"
-              onClick={() => (window.location.href = item.url)}
-            >
-              Donar
-            </Button>
           </Card>
         </>
       ))}

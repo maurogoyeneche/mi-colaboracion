@@ -18,15 +18,17 @@ export default function Home() {
         </h1>
         <h2 className="mt-8 text-lg text-zinc-900 dark:text-zinc-300 italic">
           Aprendamos... Seamos
-          <span className="text-white font-extrabold mx-1">1%</span>mejor que
-          ayer, ayudando a otros.
+          <span className="text-white font-extrabold mx-1 mb-4">1%</span>mejor
+          que ayer, ayudando a otros.
         </h2>
-        <h3 className="mt-8 text-l text-gray-700 dark:text-gray-400 ">
-          Elegí tu nivel de colaboracion
-        </h3>
+        <div className="my-10">
+          <h3 className={title({ color: "violet", size: "sm" })}>
+            Elegí tu nivel de colaboracion
+          </h3>
+        </div>
       </div>
 
-      <div className="mt-2 w-5/6 lg:w-3/6">
+      <div className="w-10/12 mx-auto">
         <Cards />
       </div>
 
