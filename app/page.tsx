@@ -18,7 +18,7 @@ export default function Home() {
           aprendiendo trucos de peluquería para mejorar tu día a día.
         </h2>
         <p className="my-6  mx-auto text-center text-lg text-zinc-500 dark:text-zinc-400 w-5/6 leading-5">
-          Hoy somos lo que ayer fuimos, y mañana seremos lo que hoy seamos.
+          Hoy somos lo que ayer fuimos... mañana seremos lo que hoy somos.
         </p>
         <div className="mb-6">
           <h3 className={title({ color: "violet", size: "sm" })}>
