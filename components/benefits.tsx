@@ -31,7 +31,7 @@ const orgs: Organization[] = [
 ];
 const BenefitedOrgs: React.FC = () => {
   return (
-    <div className="max-w-xl">
+    <div className="max-w-2xl">
       <h2 className={title({ size: "sm" })}>
         Organizaciones{" "}
         <span className={title({ color: "violet", size: "sm" })}>
