@@ -9,19 +9,17 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center w-5/6 ">
-        <h1 className={title()}>Te invitamos a &nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>Colaborar</h1>
+      <div className="inline-block max-w-xl text-center justify-center w-5/6">
+        <h1 className={title()}>Te invitamos a&nbsp;</h1>
+        <h1 className={title({ color: "violet" })}>colaborar</h1>
         <br />
-        <h1 className={title({ size: "sm" })}>
+        <h2 className={title({ size: "sm" })}>
           aprendiendo trucos de peluquería para mejorar tu día a día.
-        </h1>
-        <h2 className="mt-8 text-lg text-zinc-900 dark:text-zinc-300 italic">
-          Aprendamos... Seamos
-          <span className="text-white font-extrabold mx-1 mb-4">1%</span>mejor
-          que ayer, ayudando a otros.
         </h2>
-        <div className="my-10">
+        <p className="my-6  mx-auto text-center text-lg text-zinc-500 dark:text-zinc-400 w-5/6 leading-5">
+          Hoy somos lo que ayer fuimos, y mañana seremos lo que hoy seamos.
+        </p>
+        <div className="mb-6">
           <h3 className={title({ color: "violet", size: "sm" })}>
             Elegí tu nivel de colaboracion
           </h3>
@@ -48,6 +46,9 @@ export default function Home() {
       <div className=" text-center mt-8 items-baseline mx-auto">
         <Disclaimer />
       </div>
+      {/* <div className=" text-center mt-8 items-baseline mx-auto">
+        <BenefitedOrgs />
+      </div> */}
     </section>
   );
 }

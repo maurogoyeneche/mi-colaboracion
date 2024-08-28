@@ -67,10 +67,10 @@ export const Cards = () => {
             </CardBody>
             <CardFooter>
               <Button
-                className={`w-full mx-auto dark:text-white p-0 m-0 text-xl py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
+                className={`w-full mx-auto text-white p-0 m-0 text-xl py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
                   item.recommended
-                    ? "dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-500 opacity-90"
-                    : "dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-500"
+                    ? "  bg-purple-500 hover:bg-purple-700 focus:ring-purple-500 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-500 opacity-90"
+                    : "dark:bg-purple-600 dark:hover:bg-purple-700 bg-gray-500"
                 }`}
                 onClick={() => (window.location.href = item.url)}
               >
