@@ -24,7 +24,7 @@ const orgs: Organization[] = [
     logo: "/griselda1.JPG",
     pictures: ["/kids1.JPG", "/kids2.JPG"],
     description:
-      "Alimentando almas con amor y comida, transformando vidas con cada bocado y llevando esperanza a quienes más lo necesitan.",
+      "Alimentando almas con amor y comida, transformando vidas con cada bocado y llevando esperanza a quienes más lo necesitan. Alimentamos a mas de 40 niños y sus familias en situación de vulnerabilidad.",
   },
 
   // Add more organizations as needed
@@ -65,7 +65,7 @@ const BenefitedOrgs: React.FC = () => {
               />
             </div>
             <h3 className="text-2xl font-semibold my-2">{org.name}</h3>
-            <p className="text-gray-600 dark:text-gray-200 text-balance line-clamp-3 text-center max-w-[400px]">
+            <p className="text-gray-600 dark:text-gray-200 text-balance text-center max-w-[400px]">
               {org.description}
             </p>
             <div className="flex justify-evenly gap-4 my-4 ">
