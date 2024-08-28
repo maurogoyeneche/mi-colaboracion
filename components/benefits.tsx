@@ -1,11 +1,15 @@
 // components/BenefitedOrgs.tsx
 import React from "react";
-import Image from "next/image";
+import { Image } from "@nextui-org/image";
+import NextImage from "next/image";
+
+import { title } from "./primitives";
 
 interface Organization {
   id: number;
   name: string;
   logo: string;
+  pictures: string[];
   description: string;
 }
 
@@ -17,41 +21,73 @@ const orgs: Organization[] = [
   {
     id: 1,
     name: "Griselda ",
-    logo: "/images/tech-for-good-logo.png",
-    description: "Empowering communities through technology education.",
+    logo: "/griselda1.JPG",
+    pictures: ["/kids1.JPG", "/kids2.JPG"],
+    description:
+      "Alimentando almas con amor y comida, transformando vidas con cada bocado y llevando esperanza a quienes más lo necesitan.",
   },
-  {
-    id: 2,
-    name: "Code for Change",
-    logo: "/images/code-for-change-logo.png",
-    description: "Building a better future with coding skills.",
-  },
+
   // Add more organizations as needed
 ];
 const BenefitedOrgs: React.FC = () => {
   return (
-    <section className="my-8">
-      <h2 className="text-2xl font-bold mb-4">
-        Organizations Benefited by Our Course
+    <div className="max-w-xl">
+      <h2 className={title({ size: "sm" })}>
+        Organizaciones{" "}
+        <span className={title({ color: "violet", size: "sm" })}>
+          beneficiadas
+        </span>{" "}
+        por tu colaboración
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex justify-center mt-10">
         {orgs.map((org) => (
-          <div key={org.id} className="bg-white p-4 rounded shadow">
-            <div className="flex justify-center mb-4">
+          <article
+            key={org.id}
+            className="bg-zinc-900  dark:md:bg-zinc-900 md:bg-zinc-100  px-6 md:py-2 w-full flex flex-col justify-center items-center rounded-2xl"
+          >
+            <div className="flex  justify-center items-baseline w-full text-left my-4 max-w-[350px] mx-auto">
+              <span className="text-sm font-semibold mr-2">
+                Estado de donación :
+              </span>
+              <span className="text-sm bg-lime-600 rounded-2xl px-3 text-white font-semibold">
+                Recaudando
+              </span>
+            </div>
+            <div className="flex justify-center">
               <Image
+                priority
                 alt={`${org.name} logo`}
-                height={100}
-                objectFit="contain"
+                as={NextImage}
+                height={300}
                 src={org.logo}
-                width={100}
+                style={{ objectFit: "cover", width: "300px", height: "300px" }}
+                width={300}
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2">{org.name}</h3>
-            <p className="text-gray-600">{org.description}</p>
-          </div>
+            <h3 className="text-2xl font-semibold my-2">{org.name}</h3>
+            <p className="text-gray-600 dark:text-gray-200 text-balance line-clamp-3 text-center max-w-[400px]">
+              {org.description}
+            </p>
+            <div className="flex justify-evenly gap-4 my-4 ">
+              {org.pictures.map((picture, index) => (
+                <Image
+                  key={index}
+                  alt={`${org.name} picture ${index}`}
+                  height={150}
+                  src={picture}
+                  style={{
+                    objectFit: "cover",
+                    width: "150px",
+                    height: "150px",
+                  }}
+                  width={150}
+                />
+              ))}
+            </div>
+          </article>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

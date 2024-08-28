@@ -2,6 +2,7 @@ import { title } from "@/components/primitives";
 import { Cards } from "@/components/cards";
 import Mentor, { users } from "@/components/mentors";
 import Disclaimer from "@/components/disclaimer";
+import BenefitedOrgs from "@/components/benefits";
 
 export default function Home() {
   const moretti = users.find((user) => user.id === 1);
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center w-5/6">
+      <div className="inline-block max-w-xl text-center justify-center">
         <h1 className={title()}>Te invitamos a&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>colaborar</h1>
         <br />
@@ -39,16 +40,16 @@ export default function Home() {
         Expositores
       </h1>
 
-      <div className="flex flex-col align-middle gap-8 mt-8  items-baseline mx-10 lg:mx-auto">
+      <div className="flex flex-col align-middle items-baseline gap-8 mt-8 mx-10 lg:mx-auto ">
         <Mentor user={moretti} />
         <Mentor user={goyeneche} />
       </div>
-      <div className=" text-center mt-8 items-baseline mx-auto">
+      <div className=" text-center mt-8 items-baseline mx-10 lg:mx-auto ">
         <Disclaimer />
       </div>
-      {/* <div className=" text-center mt-8 items-baseline mx-auto">
+      <div className=" text-center mt-8 items-baseline mx-10 lg:mx-auto">
         <BenefitedOrgs />
-      </div> */}
+      </div>
     </section>
   );
 }
