@@ -43,7 +43,7 @@ const BenefitedOrgs: React.FC = () => {
         {orgs.map((org) => (
           <article
             key={org.id}
-            className="bg-zinc-900  dark:md:bg-zinc-900 md:bg-zinc-100  px-6 md:py-2 w-full flex flex-col justify-center items-center rounded-2xl"
+            className="bg-zinc-100  dark:bg-zinc-900 px-6 md:py-2 w-full flex flex-col justify-center items-center rounded-2xl"
           >
             <div className="flex  justify-center items-baseline w-full text-left my-4 max-w-[350px] mx-auto">
               <span className="text-sm font-semibold mr-2">
