@@ -11,7 +11,7 @@ export default function Home() {
   const goyeneche = users.find((user) => user.id === 2);
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="w-5/6 mx-auto flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="flex flex-col max-w-xl text-center justify-center items-center">
         <h1 className={title()}>Te invitamos a&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>colaborar</h1>
