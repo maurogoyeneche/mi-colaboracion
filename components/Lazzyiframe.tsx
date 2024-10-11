@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { FaMapMarkedAlt } from "react-icons/fa"; // Importa el ícono de mapa
 
 const LazyIframe = ({
   src,
@@ -9,7 +10,7 @@ const LazyIframe = ({
   src: string;
   title: string;
 }) => {
-  const iframeRef = useRef(null);
+  const iframeRef = useRef<HTMLDivElement | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const LazyIframe = ({
         });
       },
       {
-        rootMargin: "100px", // Load the iframe 200px before it enters the viewport
+        rootMargin: "100px", // Load the iframe 100px before it enters the viewport
       },
     );
 
@@ -41,7 +42,7 @@ const LazyIframe = ({
   return (
     <div ref={iframeRef} className="relative w-full h-0 pb-[56.25%]">
       {/* Aspect ratio 16:9 */}
-      {isLoaded && (
+      {isLoaded ? (
         <iframe
           allowFullScreen
           className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
@@ -50,6 +51,10 @@ const LazyIframe = ({
           title={title}
           {...props}
         />
+      ) : (
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-200 animate-pulse rounded-lg">
+          <FaMapMarkedAlt className="text-gray-400 text-6xl" />
+        </div>
       )}
     </div>
   );
