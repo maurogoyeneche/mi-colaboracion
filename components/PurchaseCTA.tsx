@@ -14,7 +14,7 @@ const PurchaseCTA = ({ wording }: { wording?: boolean }) => {
   };
 
   return (
-    <Card className="w-full md:w-4/6 mx-auto">
+    <Card className="w-full mx-auto">
       {wording && (
         <CardBody className="text-center text-balance">
           Con tu compra, reservas tu lugar y contribuyes a cubrir los gastos del
@@ -27,7 +27,8 @@ const PurchaseCTA = ({ wording }: { wording?: boolean }) => {
           color="primary"
           onClick={handleNavigation}
         >
-          <span>Adquiere tu entrada</span> <span> $970</span>
+          <span className="font-semibold">Adquiere tu entrada</span>{" "}
+          <span className="font-semibold"> $970</span>
         </Button>
       </CardFooter>
     </Card>
