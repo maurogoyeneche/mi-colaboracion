@@ -11,7 +11,7 @@ export default function Home() {
   const goyeneche = users.find((user) => user.id === 2);
 
   return (
-    <section className="w-5/6 mx-auto flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="w-5/6 mx-auto flex flex-col items-center justify-center gap-4 py-16 md:py-16 ">
       <div className="flex flex-col max-w-xl text-center justify-center items-center">
         <h1 className={title()}>Te invitamos a&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>colaborar</h1>
@@ -19,7 +19,7 @@ export default function Home() {
         <h2 className={title({ size: "sm" })}>
           aprendiendo trucos de peluquería para mejorar tu día a día.
         </h2>
-        <section className="mt-10 w-4/5 mx-auto">
+        <section className="mt-10  mx-auto">
           <PurchaseCTA />
         </section>
         <section className="bg-black w-full">
@@ -56,10 +56,10 @@ export default function Home() {
         <Mentor user={moretti} />
         <Mentor user={goyeneche} />
       </div>
-      <div className=" text-center mt-8 items-baseline mx-10 lg:mx-auto ">
+      <div className=" text-center mt-8 items-baseline lg:mx-auto ">
         <Disclaimer />
       </div>
-      <div className=" text-center mt-8 items-baseline mx-10 lg:mx-auto">
+      <div className=" text-center mt-8 items-baseline lg:mx-auto">
         <BenefitedOrgs />
       </div>
     </section>
