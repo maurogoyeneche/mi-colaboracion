@@ -5,6 +5,7 @@ import PurchaseCTA from "@/components/PurchaseCTA";
 import Mentor, { users } from "@/components/mentors";
 import Disclaimer from "@/components/disclaimer";
 import BenefitedOrgs from "@/components/benefits";
+import LazyIframe from "@/components/Lazzyiframe";
 
 export default function Home() {
   const moretti = users.find((user) => user.id === 1);
@@ -45,14 +46,9 @@ export default function Home() {
         <h5 className="text-lg font-semibold">Ubicación - Tres Cruces</h5>
       </div>
       <div className="w-5/6 md:w-3/6">
-        <iframe
-          allowFullScreen
-          className="border-0 rounded-lg w-full"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+        <LazyIframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.4096547317486!2d-56.17019402371767!3d-34.89616777300284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f8052fa2a50f5%3A0xdd673cf5d5f5781d!2sEduardo%20V%C3%ADctor%20Haedo%202276%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1sen!2suy!4v1728615883195!5m2!1sen!2suy"
           title="Ubicación de Eduardo Víctor Haedo 2276, Montevideo"
-          width="600"
         />
       </div>
 
