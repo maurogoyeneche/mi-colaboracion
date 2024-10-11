@@ -6,7 +6,7 @@ import NextImage from "next/image";
 import { title } from "./primitives";
 
 interface Organization {
-  id: number;
+  id: string;
   name: string;
   logo: string;
   pictures: string[];
@@ -19,7 +19,7 @@ interface Organization {
 
 const orgs: Organization[] = [
   {
-    id: 1,
+    id: "griselda-1",
     name: "Griselda ",
     logo: "/griselda1.JPG",
     pictures: ["/kids1.JPG", "/kids2.JPG"],

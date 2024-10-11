@@ -1,5 +1,7 @@
+import NextImage from "next/image";
+
 import { title } from "@/components/primitives";
-import { Cards } from "@/components/cards";
+import PurchaseCTA from "@/components/PurchaseCTA";
 import Mentor, { users } from "@/components/mentors";
 import Disclaimer from "@/components/disclaimer";
 import BenefitedOrgs from "@/components/benefits";
@@ -10,25 +12,35 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
+      <div className="flex flex-col max-w-xl text-center justify-center items-center">
         <h1 className={title()}>Te invitamos a&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>colaborar</h1>
         <br />
         <h2 className={title({ size: "sm" })}>
           aprendiendo trucos de peluquería para mejorar tu día a día.
         </h2>
-        <p className="my-6  mx-auto text-center text-lg text-zinc-500 dark:text-zinc-400 w-5/6 leading-5">
-          Hoy somos lo que ayer fuimos... mañana seremos lo que hoy somos.
-        </p>
+        <section className="mt-10 w-4/5 mx-auto">
+          <PurchaseCTA />
+        </section>
+        <section className="bg-black w-full">
+          <NextImage
+            priority
+            alt="Mentor logo"
+            height={30}
+            src="/BANNER_CURSO_OCT21.png"
+            width={700}
+          />
+        </section>
         <div className="mb-6">
           <h3 className={title({ color: "violet", size: "sm" })}>
-            Elegí tu nivel de colaboracion
+            Reservá tu lugar
           </h3>
         </div>
       </div>
 
       <div className="w-10/12 mx-auto">
-        <Cards />
+        {/* <Cards /> */}
+        <PurchaseCTA wording />
       </div>
 
       <h1
