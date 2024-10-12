@@ -27,7 +27,7 @@ const PurchaseCTA = ({ wording }: { wording?: boolean }) => {
           color="primary"
           onClick={handleNavigation}
         >
-          <span className="font-semibold">Adquiere tu entrada</span>{" "}
+          <span className="font-semibold">Entrada</span>{" "}
           <span className="font-semibold"> $970</span>
         </Button>
       </CardFooter>
