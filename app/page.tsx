@@ -6,6 +6,7 @@ import Mentor, { users } from "@/components/mentors";
 import Disclaimer from "@/components/disclaimer";
 import BenefitedOrgs from "@/components/benefits";
 import LazyIframe from "@/components/Lazzyiframe";
+import Sponsors from "@/components/sponsors";
 
 export default function Home() {
   const moretti = users.find((user) => user.id === 1);
@@ -64,6 +65,19 @@ export default function Home() {
       <div className="flex flex-col align-middle items-baseline gap-8 mt-8 mx-10 lg:mx-auto ">
         <Mentor user={moretti} />
         <Mentor user={goyeneche} />
+      </div>
+      <h1
+        className={title({
+          color: "violet",
+          class:
+            "mt-8 text-center lg:text-md p-8 border-t-2 dark:border-t-zinc-800 dark:border-t-1   pb-4 w-full max-w-4xl",
+        })}
+      >
+        Agradecimientos
+      </h1>
+
+      <div className="flex gap-8 mt-8 mx-10 lg:mx-auto ">
+        <Sponsors />
       </div>
       <div className=" text-center mt-8 items-baseline lg:mx-auto ">
         <Disclaimer />
