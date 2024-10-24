@@ -49,8 +49,11 @@ const BenefitedOrgs: React.FC = () => {
               <span className="text-sm font-semibold mr-2">
                 Estado de donación :
               </span>
-              <span className="text-sm bg-lime-600 rounded-2xl px-3 text-white font-semibold">
+              {/* <span className="text-sm bg-lime-600 rounded-2xl px-3 text-white font-semibold">
                 Recaudando
+              </span> */}
+              <span className="text-sm bg-orange-600 rounded-2xl px-3 text-white font-semibold">
+                Recaudado $ 22.310 UYU
               </span>
             </div>
             <div className="flex justify-center">
